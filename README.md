@@ -68,3 +68,18 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+# Weather App
+
+A simple weather app built with ReactJS that allows users to search for current weather conditions by city.
+
+## Features
+- Search for weather by city
+- Displays temperature, weather condition, and icon
+- API integration with OpenWeatherMap
+
+## Setup Instructions
+1. Clone the repository.
+2. Run `npm install` to install dependencies.
+3. Run `npm start` to start the application.
