@@ -1,47 +1,121 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to bottom right, #1e3c72, #2a5298);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 40px;
+  width: 450px;
+  text-align: center;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+input[type="text"] {
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px 0 0 10px;
+  outline: none;
+  width: 70%;
+}
+
+button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 12px;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
 .weather-info {
   margin-top: 20px;
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .weather-info h2 {
   font-size: 1.8rem;
   margin-bottom: 10px;
-  color: #002244;
+  color: #fff;
 }
 
 .temperature {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: bold;
-  color: #ff6600;
-  margin: 10px 0;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  color: #ffcc00;
+  margin: 20px 0;
 }
 
 .weather-description {
   font-size: 1.2rem;
   text-transform: capitalize;
-  color: #555;
+  color: #ffffff;
   margin-bottom: 15px;
 }
 
 .additional-info {
   margin-top: 20px;
   text-align: left;
+  font-size: 1rem;
 }
 
 .additional-info p {
-  margin: 5px 0;
-  font-size: 1rem;
-  color: #333;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
 }
 
-img {
-  margin-top: 10px;
-  width: 100px;
-  height: 100px;
+.additional-info svg {
+  margin-right: 10px;
+}
+
+.forecast-container {
+  margin-top: 20px;
+}
+
+.forecast-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 5px 0;
+  border-radius: 10px;
+}
+
+.forecast-item p {
+  margin: 0;
+  font-size: 1rem;
 }

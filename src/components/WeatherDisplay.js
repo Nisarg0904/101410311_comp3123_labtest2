@@ -1,5 +1,11 @@
 import React from "react";
-import { WiHumidity, WiStrongWind, WiSunrise, WiSunset } from "react-icons/wi";
+import {
+  WiHumidity,
+  WiStrongWind,
+  WiSunrise,
+  WiSunset,
+  WiThermometer,
+} from "react-icons/wi";
 
 const WeatherDisplay = ({ weather }) => {
   const temperature = Math.round(weather.main.temp - 273.15);
@@ -12,10 +18,7 @@ const WeatherDisplay = ({ weather }) => {
       <h2>
         {weather.name}, {weather.sys.country}
       </h2>
-      <div className="temperature">
-        <p>{temperature}°C</p>
-        <p>Feels like: {feelsLike}°C</p>
-      </div>
+      <p className="temperature">{temperature}°C</p>
       <p className="weather-description">{weather.weather[0].description}</p>
       <img
         src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
@@ -24,18 +27,37 @@ const WeatherDisplay = ({ weather }) => {
 
       <div className="additional-info">
         <p>
-          <WiHumidity /> Humidity: {weather.main.humidity}%
+          <WiThermometer size={24} /> Feels Like: {feelsLike}°C
         </p>
         <p>
-          <WiStrongWind /> Wind Speed: {weather.wind.speed} m/s
-        </p>
-        <p>Visibility: {weather.visibility / 1000} km</p>
-        <p>
-          <WiSunrise /> Sunrise: {sunriseTime}
+          <WiHumidity size={24} /> Humidity: {weather.main.humidity}%
         </p>
         <p>
-          <WiSunset /> Sunset: {sunsetTime}
+          <WiStrongWind size={24} /> Wind Speed: {weather.wind.speed} m/s
         </p>
+        <p>
+          <WiSunrise size={24} /> Sunrise: {sunriseTime}
+        </p>
+        <p>
+          <WiSunset size={24} /> Sunset: {sunsetTime}
+        </p>
+      </div>
+
+      <div className="forecast-container">
+        <h3>Weekly Forecast</h3>
+        {/* Example hardcoded forecast, replace with API data */}
+        <div className="forecast-item">
+          <p>Monday</p>
+          <p>27°C</p>
+        </div>
+        <div className="forecast-item">
+          <p>Tuesday</p>
+          <p>23°C</p>
+        </div>
+        <div className="forecast-item">
+          <p>Wednesday</p>
+          <p>27°C</p>
+        </div>
       </div>
     </div>
   );
